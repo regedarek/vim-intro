@@ -15,6 +15,8 @@ fun! Start()
         \ buftype=nofile
         \ nobuflisted
         \ nocursorcolumn
+        \ nonumber
+        \ colorcolumn=
         \ nocursorline
         \ nolist
         \ nonumber
@@ -22,9 +24,8 @@ fun! Start()
         \ norelativenumber
 
     " Now we can just write to the buffer, whatever you want.
-    call append('$', "")
     for line in split(system('cat ~/code/dotfiles/vim-intro.txt'), '\n')
-        call append('$', '                                   ' . l:line)
+        call append('$', '                    ' . l:line)
     endfor
 
     " No modifications to this buffer
