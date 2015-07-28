@@ -29,7 +29,7 @@ fun! Start()
     endfor
 
     " No modifications to this buffer
-    setlocal nomodifiable nomodified
+    " setlocal nomodifiable nomodified
 
     " When we go to insert mode start a new buffer, and start insert
     nnoremap <buffer><silent> e :enew<CR>
